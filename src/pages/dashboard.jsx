@@ -12,20 +12,29 @@ class Dashboard extends React.Component {
      }
 
      componentDidMount() {
-          this.state.sessionStorage.map(e => {
+          this.state.sessionStorage.some(e => {
                if (window.location.pathname === e['uri_type'] && e['flag'] === 'ON') {
-                    return this.setState({ showIcon: true });
+                    this.setState({ showIcon: true });
+                    return true;
                } else {
-                    return this.setState({ showIcon: false });
+                    this.setState({ showIcon: false });
+                    return false;
                }
           })
+     }
+
+     loadLCIcon() {
+          // const script = document.createElement("script");
+          // script.src = "../scripts/liveChat.js";
+          // script.async = true;
+          // document.body.appendChild(script);
      }
 
      render() {
           return (
                <React.Fragment>
                     <div className="container">
-                         <h2>DIFFERENT HEADER IN DASHBOARD</h2>
+                         <h2 className="mt-5">DIFFERENT HEADER IN DASHBOARD</h2>
                          {this.state.showIcon ? (<img alt="lcLogo" src={lcLogo} style={{ bottom: 0, float: 'right', marginRight: '3%' }} />) : null}
                     </div>
                </React.Fragment>

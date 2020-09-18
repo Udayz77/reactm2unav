@@ -55,7 +55,7 @@ class App extends React.Component {
     return (
       <Router>
         <nav className="navbar navbar-dark bg-dark">
-          <ul className="nav navbar-nav">
+          <ul className="container nav navbar-nav">
             <li className="active">
               <Link to="/home">Home</Link>
             </li>
