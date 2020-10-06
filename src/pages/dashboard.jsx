@@ -23,19 +23,12 @@ class Dashboard extends React.Component {
           })
      }
 
-     loadLCIcon() {
-          // const script = document.createElement("script");
-          // script.src = "../scripts/liveChat.js";
-          // script.async = true;
-          // document.body.appendChild(script);
-     }
-
      render() {
           return (
                <React.Fragment>
                     <div className="container">
                          <h2 className="mt-5">DIFFERENT HEADER IN DASHBOARD</h2>
-                         {this.state.showIcon ? (<img alt="lcLogo" src={lcLogo} style={{ bottom: 0, float: 'right', marginRight: '3%' }} />) : null}
+                         {this.state.showIcon ? (<img alt="lcLogo" src={lcLogo} style={{ float: 'right', marginRight: '3%' }} />) : null}
                     </div>
                </React.Fragment>
           );

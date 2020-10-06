@@ -28,7 +28,7 @@ class Home extends React.Component {
                <React.Fragment>
                     <div className="container-fluid">
                          <h2 className="mt-5">HEADER IN HOME PAGE</h2>
-                         {this.state.showIcon ? (<img alt="lcLogo" src={lcLogo} style={{ bottom: 0, float: 'right', marginRight: '3%' }} />) : null}
+                         {this.state.showIcon ? (<img alt="lcLogo" src={lcLogo} style={{ float: 'right', marginRight: '3%' }} />) : null}
                     </div>
                </React.Fragment>
           );
